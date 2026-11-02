@@ -1,0 +1,18 @@
+name: RS
+
+services:
+  admin:
+    build:
+      context: ./admin
+      dockerfile: Dockerfile
+    container_name: RS_admin
+    ports:
+      - "270:80"
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: RS_client
+    ports:
+      - "271:80"
